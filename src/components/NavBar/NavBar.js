@@ -10,7 +10,14 @@ const Navbar = () => {
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
           <LogoContainer>
-            <p>Puntero</p>
+            {/* <p>Puntero</p> */}
+            <img
+              src="/logo.png"
+              width="90"
+              height="70"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
           </LogoContainer>
 
           <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
