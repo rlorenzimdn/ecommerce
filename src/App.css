@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.main-container {
+    float: left;
+    width: 100%;
+}

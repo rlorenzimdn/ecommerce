@@ -1,29 +1,20 @@
+// UpperCamelCase
 import React, { useState } from "react";
+import './NavBar.scss'
 import {Container,LogoContainer,Wrapper,Menu,MenuItem,MenuItemLink,MobileIcon,} from "./Narbar.elements";
-import { IconContext } from "react-icons";
+import CartWidget from './CartWidget'
 
-const Navbar = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-  return (
-    <Container>
+const NavBar = () => {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);  
+    return(
+        <Container>
       <Wrapper>
-        <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
-          <LogoContainer>
-            {/* <p>Puntero</p> */}
-            <img
-              src="/logo.png"
-              width="90"
-              height="70"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-          </LogoContainer>
-
-          <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <LogoContainer>
+                <img src="/assets/logo.png" width="90" height="70" className="d-inline-block align-top" alt="Logo Puntero"/>
+            </LogoContainer>
+            <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
           </MobileIcon>
-
-          <Menu open={showMobileMenu}>
+            <Menu open={showMobileMenu}>
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
@@ -41,22 +32,16 @@ const Navbar = () => {
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
-                  CARRITO
+                  TEMAS
                 </div>
               </MenuItemLink>
             </MenuItem>
-            <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                <div>
-                  CONTACTO
-                </div>
-              </MenuItemLink>
-            </MenuItem>
-          </Menu>
-        </IconContext.Provider>
-      </Wrapper>
-    </Container>
-  );
-};
+            </Menu>
 
-export default Navbar;
+            <CartWidget />
+            </Wrapper>
+            </Container>
+    )
+}
+
+export default NavBar
