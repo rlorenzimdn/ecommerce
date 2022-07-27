@@ -8,9 +8,11 @@
     justify-content: center;
     text-align: center;
     margin-right: 10px;
+
     img {
-        width:50%;
+        width: 50%;
     }
+
     .countProd {
         display: flex;
         /* height: 77px; */
@@ -18,11 +20,11 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .countProd p {
         font-size: 22px;
     }
-    
+
     .countProd button {
         padding: 10px;
         font-size: 27px;
