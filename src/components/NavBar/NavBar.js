@@ -4,7 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const NavBar = () => {
   return (
-    <div className="navbar-primary">
+    <div className="nav-primary">
       <img
         src="/assets/logo.png"
         width="90"

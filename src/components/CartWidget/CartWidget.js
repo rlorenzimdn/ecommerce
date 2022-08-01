@@ -1,3 +1,4 @@
+import "./CartWidget.scss";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const CartWidget = () => {

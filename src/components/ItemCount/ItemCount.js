@@ -1,4 +1,6 @@
+import "./ItemCount.scss";
 import React, { useState } from "react";
+
 const ItemCount = ({ stock }) => {
   const [count, setCount] = useState(1);
 
@@ -11,11 +13,11 @@ const ItemCount = ({ stock }) => {
   };
 
   return (
-    <>
+    <div className="item-count">
       <button onClick={onRemove}>-</button>
       <p>{count}</p>
       <button onClick={onAdd}>+</button>
-    </>
+    </div>
   );
 };
 

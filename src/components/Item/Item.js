@@ -1,23 +1,24 @@
 import "./Item.scss";
-import Item from "@mui/material/Card";
-import ItemContent from "@mui/material/CardContent";
+// import ItemCount from "../ItemCount/ItemCount";
+// import ItemCard from "@mui/material/Card";
+// import ItemContent from "@mui/material/CardContent";
 import { Button } from "@mui/material";
 
-const Item = ({ image, title, price }) => {
+const Item = ({ data }) => {
+  // const { title, price, image, author, description, category, stock } = data;
+  const { title, price, image } = data;
+
   return (
-    <Item sx={{ minWidth: 275 }}>
-      <ItemContent>
-        <div className="card-item">
-          <div>
-            <img src={`./${image}`} />
-          </div>
-          <p>{title}</p>
-          <span>$ {price}</span>
-          <Button variant={"contained"}>Detalle</Button>
-        </div>
-      </ItemContent>
-    </Item>
-  );
+    <div className="item-product">
+      <div className="float-options"></div>
+      <img src={`/assets/${image}`} alt="Imagen producto" />
+      <div className="detail-product">
+        <p>{title}</p>
+        <span>$ {price}</span>
+        <button>Comprar</button>
+      </div>
+    </div>
+  )
 };
 
 export default Item;

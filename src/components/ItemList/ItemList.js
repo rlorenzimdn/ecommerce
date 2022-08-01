@@ -1,15 +1,13 @@
-import ItemProduct from "../Item/Item";
+import Item from "../Item/Item";
 
-const ItemList = ({ dataProducts }) => {
-  const [listProducts, setListProducts] = useState([]);
-
-  return (
-    <>
-      {dataProducts.map((product) => {
-        return <ItemProduct key={product.id} data={product} />;
-      })}
-    </>
-  );
+const ItemList = ({dataProducts}) => {
+  return(
+      <>
+          {dataProducts.map( (Products) => {    
+              return <Item key={Products.id} data={Products}/>
+          })}
+      </>
+  )
 };
 
 export default ItemList;

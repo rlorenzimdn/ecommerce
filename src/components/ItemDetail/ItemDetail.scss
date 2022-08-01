@@ -1,0 +1,20 @@
+.item-detail img {
+    width: 100%;
+}
+
+.item-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-detail p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item-detail span {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
