@@ -1,0 +1,16 @@
+.product__item {
+  text-align: center;
+}
+
+.product__item__image {
+  width: 320px;
+}
+
+.product__item__name {
+  font-size: 1.6rem;
+}
+
+.product__item a {
+  text-decoration: none;
+  color: var(--just-white);
+}
