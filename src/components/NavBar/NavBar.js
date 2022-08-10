@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "./NavBar.scss";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
@@ -13,17 +13,20 @@ function NavBar() {
           alt="Logo Puntero"
         />
         <div className="navbar__items">
-          <Link className="navbar__item" to={"/home"}>
+          <Link to={"/Home"} className="navbar__item">
             Inicio
           </Link>
-          <Link className="navbar__item" to={"/books"}>
+          <Link to={"/Books"} className="navbar__item">
             Libros
           </Link>
-          <Link className="navbar__item" to={"/topics"}>
+          <Link to={"/Topics"} className="navbar__item">
             Temas
           </Link>
-          <Link className="navbar__item" to={"/authors"}>
+          <Link to={"/Authors"} className="navbar__item">
             Autores
+          </Link>
+          <Link to={"/Contact"} className="navbar__item">
+            Contacto
           </Link>
         </div>
         <div className="navbar__cart">

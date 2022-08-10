@@ -1,49 +1,40 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./ItemDetailContainer.scss";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import products from "../Products/Products";
+import Products from "../Data/Products";
 
-const ItemDetailContainer = () => {
+function ItemDetailContainer({ section }) {
   const [productData, setProductData] = useState({});
-  const [detailContainer, setDetailContainer] = useState([]);
+
   const { id } = useParams();
-
-  const getItem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(productData);
-    }, 2000);
-  });
-
-  useEffect(() => {
-    getItem
-      .then((res) => {
-        setDetailContainer(res);
-      })
-      .catch((error) => {
-        console.log("Error en ItemListContainer");
-      })
-      .finally(() => {
-        console.log("Se termino ItemListContainer");
-      });
-  }, []);
 
   useEffect(() => {
     filterById();
-  }, []);
+  }, [id]);
 
   const filterById = () => {
-    products.some((product) => {
-      if (product.id == id) {
+    Products.forEach((product) => {
+      if (product.id === id) {
         setProductData(product);
       }
     });
   };
 
   return (
-    <>
-      <ItemDetail data={productData} />
-    </>
+    <div className="item__detail__container">
+      <ItemDetail
+        id={productData.id}
+        title={productData.title}
+        price={productData.price}
+        image={productData.img}
+        description={productData.description}
+        stock={productData.stock}
+      />
+    </div>
   );
-};
+}
 
 export default ItemDetailContainer;

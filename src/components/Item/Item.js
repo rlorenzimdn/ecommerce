@@ -1,16 +1,24 @@
-import ItemCount from "../ItemCount/ItemCount";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import "./Item.scss";
+import { CartContext } from "../../context/CartContext";
 
-const Item = ({ data }) => {
-  const { name, price, image, stock } = data;
+function Item({ data }) {
+  const { name } = useContext(CartContext);
+
+  const { id, title, price, image } = data;
+
   return (
-    <div className="item-product">
-      <img src={`/assets/${image}`} alt="imagen de producto" />
-      <p>{name}</p>
-      <p>$ {price}</p>
-      <ItemCount stock={stock} initial={1} />
-      <button>Comprar</button>
-    </div>
+    <Link to={`/Products/${id}`}>
+      <h1>{name}</h1>
+      <div className="item__product">
+        <img src={image} className="item__product__img" alt="Imagen Libro" />
+        <p>{title}</p>
+        <p>${price}</p>
+        <button>Añadir al Carrito</button>
+      </div>
+    </Link>
   );
-};
+}
 
 export default Item;

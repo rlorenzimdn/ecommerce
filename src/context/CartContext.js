@@ -1,10 +1,9 @@
 import React, { createContext, useState } from "react";
 
-export const CartContext = createContext(null);
+export const CartContext = createContext();
 
-const CartProvider = (props) => {
+const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  // const [total, setTotal] = useState(0);
 
   const addToCart = (item, qty) => {
     if (cart.some((el) => el.id === item.id)) {
@@ -45,7 +44,7 @@ const CartProvider = (props) => {
         deleteCart,
       }}
     >
-      {props.children}
+      {children}
     </CartContext.Provider>
   );
 };
