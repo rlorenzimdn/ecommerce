@@ -2,9 +2,9 @@
 
 Proyecto Final del Curso React de CoderHouse
 
-## Available Scripts
+## Autor:
 
-In the project directory, you can run:
+Ricardo Lorenzi
 
 ### `npm start`
 
