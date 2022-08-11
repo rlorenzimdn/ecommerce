@@ -1,6 +1,6 @@
 # Tienda en linea de venta de Libros - Puntero
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto Final del Curso React de CoderHouse
 
 ## Available Scripts
 
