@@ -1,4 +1,4 @@
-# Tienda en linea de venta de Libros - Puntero
+# Tienda en Linea de Venta de Libros - Puntero
 
 Proyecto Final del Curso React de CoderHouse
 
