@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Tienda en linea de venta de Libros - Puntero
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
