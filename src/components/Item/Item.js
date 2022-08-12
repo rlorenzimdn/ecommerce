@@ -5,12 +5,11 @@ import { CartContext } from "../../context/CartContext";
 
 function Item({ data }) {
   const { name } = useContext(CartContext);
-
   const { id, title, price, image } = data;
 
   return (
-    <Link to={`/Products/${id}`}>
-      <h1>{name}</h1>
+    <Link to={`/item/${id}`}>
+      <h2>{name}</h2>
       <div className="item__product">
         <img src={image} className="item__product__img" alt="Imagen Libro" />
         <p>{title}</p>

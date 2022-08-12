@@ -7,25 +7,27 @@ function NavBar() {
   return (
     <div className="navbar">
       <div className="navbar__container">
-        <img
-          className="navbar__logo"
-          src="/assets/logo.png"
-          alt="Logo Puntero"
-        />
+        <div>
+          <img
+            className="navbar__logo"
+            src="/assets/logo.png"
+            alt="Logo Puntero"
+          />
+        </div>
         <div className="navbar__items">
-          <Link to={"/Home"} className="navbar__item">
+          <Link to={"/"} className="navbar__item">
             Inicio
           </Link>
-          <Link to={"/Books"} className="navbar__item">
+          <Link to={"/books"} className="navbar__item">
             Libros
           </Link>
-          <Link to={"/Topics"} className="navbar__item">
+          <Link to={"/topics"} className="navbar__item">
             Temas
           </Link>
-          <Link to={"/Authors"} className="navbar__item">
+          <Link to={"/authors"} className="navbar__item">
             Autores
           </Link>
-          <Link to={"/Contact"} className="navbar__item">
+          <Link to={"/contact"} className="navbar__item">
             Contacto
           </Link>
         </div>

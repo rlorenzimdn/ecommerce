@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import "./ItemCount.scss";
+import { CartContext } from "../../context/CartContext"
 
 function ItemCount({ stock, setStock }) {
+  const { addProductToCart } = useContext(CartContext);
+
   const [count, setCount] = useState(1);
 
-  const addItem = () => {
+  const onAdd = () => {
+    addProductToCart(setStock)
     setCount(count + 1);
   };
 
@@ -16,7 +20,7 @@ function ItemCount({ stock, setStock }) {
     <div className="item__count">
       <button onClick={removeItem}>-</button>
       <p>{count}</p>
-      <button onClick={addItem}>+</button>
+      <button onClick={onAdd}>+</button>
     </div>
   );
 }

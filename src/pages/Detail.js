@@ -4,7 +4,7 @@ function Detail() {
   return (
     <div className="container">
       <section className="main-container">
-        <ItemDetailContainer section="Libro" />
+        <ItemDetailContainer />
       </section>
     </div>
   );

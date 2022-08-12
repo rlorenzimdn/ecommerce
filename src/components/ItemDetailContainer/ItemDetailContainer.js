@@ -4,35 +4,34 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemDetailContainer.scss";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Products from "../Data/Products";
+import Products from "../Data/products.mock";
 
-function ItemDetailContainer({ section }) {
-  const [productData, setProductData] = useState({});
+function ItemDetailContainer({ items }) {
 
-  const { id } = useParams();
+  const [getProductData, setProductData] = useState({});
+
+  const { itemid } = useParams();
+
+  const getProduct = new Promise((resolve, reject) => {
+    setInterval(() => {
+      resolve(Products);
+    });
+  });
 
   useEffect(() => {
-    filterById();
-  }, [id]);
-
-  const filterById = () => {
-    Products.forEach((product) => {
-      if (product.id === id) {
-        setProductData(product);
-      }
-    });
-  };
+    getProduct.then((Products) =>
+      // eslint-disable-next-line array-callback-return
+      Products.some((item) => {
+        if (item.id === itemid) {
+          setProductData(item);
+        }
+      })
+    );
+  }, [itemid]);
 
   return (
     <div className="item__detail__container">
-      <ItemDetail
-        id={productData.id}
-        title={productData.title}
-        price={productData.price}
-        image={productData.img}
-        description={productData.description}
-        stock={productData.stock}
-      />
+      <ItemDetail item={getProductData} />
     </div>
   );
 }

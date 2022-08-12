@@ -4,7 +4,8 @@ import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 
-function ItemDetail({id, title, price, image, stock, description}) {
+function ItemDetail({ data, setShowModal }) {
+  const { id, title, price, image, author, description, stock } = data;
 
   const [show, setShow] = useState(false);
   const { addItem } = useContext(CartContext);
@@ -21,11 +22,13 @@ function ItemDetail({id, title, price, image, stock, description}) {
           className="itemDetail__img"
           src={image}
           alt={`Imagen de ${title}`}
+          onClick={() => setShowModal(true)}
         ></img>
       </div>
       <div className="itemDetail__container">
-        <span className="itemDetail__nombre">{title}</span>
-        <span className="itemDetail__precio">Precio: ${price}</span>
+        <span className="itemDetail__name">{title}</span>
+        <span className="itemDetail__name">{author}</span>
+        <span className="itemDetail__price">Precio: ${price}</span>
         <span className="itemDetail__descripcion">{description}</span>
         <span className="itemDetail__stock">Stock: {stock}</span>
         <div hidden={show} className="itemDetail__count">

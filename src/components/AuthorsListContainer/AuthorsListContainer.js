@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import "./ItemListContainer.scss";
-import ItemList from "../ItemList/ItemList";
+import "./AuthorsListContainer.scss";
+import AuthorsList from "../AuthorsList/AuthorsList";
 import Products from "../Data/products.mock";
 
-function ItemListContainer({ section }) {
+function AuthorsListContainer({ section }) {
   const [listProducts, setListProducts] = useState([]);
 
   const getProducts = new Promise((resolve, reject) => {
@@ -21,9 +21,9 @@ function ItemListContainer({ section }) {
   return (
     <div className="item__list__container">
       <h2>{section}</h2>
-      <ItemList items={listProducts} />
+      <AuthorsList items={listProducts} />
     </div>
   );
 }
 
-export default ItemListContainer;
+export default AuthorsListContainer;
