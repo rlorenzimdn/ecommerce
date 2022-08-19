@@ -2,7 +2,7 @@ import "./AuthorsListContainer.scss";
 import AuthorsList from "../AuthorsList/AuthorsList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
 import db from "../../firebaseConfig";
 
 const AuthorsListContainer = ({ section }) => {
@@ -12,7 +12,7 @@ const AuthorsListContainer = ({ section }) => {
 
   const getProducts = async () => {
     const productCollection = category
-      ? query(collection(db, "products"), where("categoryId", "==", category))
+      ? query(collection(db, "products"), orderBy("author"), limit(10))
       : collection(db, "products");
 
     const productSnapshot = await getDocs(productCollection);

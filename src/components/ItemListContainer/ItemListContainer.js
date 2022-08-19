@@ -11,7 +11,7 @@ const ItemListContainer = ({ section, categoryParam }) => {
 
   const getProducts = async () => {
     const productCollection = category
-      ? query(collection(db, "products"), where("categoryId", "==", category))
+      ? query(collection(db, "products"), where("category", "==", category))
       : collection(db, "products");
 
     const productSnapshot = await getDocs(productCollection);
