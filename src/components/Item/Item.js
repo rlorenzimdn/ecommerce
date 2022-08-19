@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Item.scss";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 
-function Item({ data }) {
+const Item = ({ data }) => {
   const { name } = useContext(CartContext);
+
   const { id, title, price, image } = data;
 
   return (
@@ -18,6 +19,6 @@ function Item({ data }) {
       </div>
     </Link>
   );
-}
+};
 
 export default Item;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const FORM_ENDPOINT = "";
 
-function Contact() {
+const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -49,6 +49,6 @@ function Contact() {
       </div>
     </form>
   );
-}
+};
 
 export default Contact;

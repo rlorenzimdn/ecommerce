@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import AuthorsListContainer from "../components/AuthorsListContainer/AuthorsListContainer";
 
-function Authors() {
+const Authors = () => {
   return (
     <div className="container">
       <section className="main-container">
@@ -10,6 +10,6 @@ function Authors() {
       </section>
     </div>
   );
-}
+};
 
 export default Authors;

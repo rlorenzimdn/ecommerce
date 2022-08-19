@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import BooksListContainer from "../components/BooksListContainer/BooksListContainer";
 
-function Books() {
+const Books = () => {
   return (
     <div className="container">
       <section className="main-container">
@@ -10,6 +10,6 @@ function Books() {
       </section>
     </div>
   );
-}
+};
 
 export default Books;

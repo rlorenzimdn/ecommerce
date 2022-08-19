@@ -3,7 +3,7 @@ import "./NavBar.scss";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -39,6 +39,6 @@ function NavBar() {
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;

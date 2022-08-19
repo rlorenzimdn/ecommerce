@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Topics.scss";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 
-function Topics({ data }) {
+const Topics = ({ data }) => {
   const { name } = useContext(CartContext);
+
   const { id, category, title, author } = data;
 
   return (
-    <Link to={`/books/${id}`}>
+    <Link to={`/item/${id}`}>
       <h2>{name}</h2>
       <div className="item__product">
         <p>--------------------------------------------</p>
@@ -22,6 +23,6 @@ function Topics({ data }) {
       </div>
     </Link>
   );
-}
+};
 
 export default Topics;

@@ -1,48 +1,24 @@
-import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
-import { CartContext } from "../../context/CartContext";
+import "./ItemDetail.scss";
 
-function ItemDetail({ data, setShowModal }) {
-  const { id, title, price, image, author, description, stock } = data;
-
-  const [show, setShow] = useState(false);
-  const { addItem } = useContext(CartContext);
-
-  const onAdd = (cant) => {
-    show ? setShow(false) : setShow(true);
-    addItem({ id, title, price, image }, cant);
-  };
+const ItemDetail = ({ data }) => {
+  const { image, title, description, price, hand, stock } = data;
 
   return (
-    <div className="itemDetail">
-      <div className="itemDetail__container">
-        <img
-          className="itemDetail__img"
-          src={image}
-          alt={`Imagen de ${title}`}
-          onClick={() => setShowModal(true)}
-        ></img>
+    <div className="item-detail">
+      <div>
+        <img src={`/assets/${image}`} alt="imagen de producto" />
       </div>
-      <div className="itemDetail__container">
-        <span className="itemDetail__name">{title}</span>
-        <span className="itemDetail__name">{author}</span>
-        <span className="itemDetail__price">Precio: ${price}</span>
-        <span className="itemDetail__descripcion">{description}</span>
-        <span className="itemDetail__stock">Stock: {stock}</span>
-        <div hidden={show} className="itemDetail__count">
-          <ItemCount stock={stock} onAdd={onAdd} />
-        </div>
-        <Link className="itemdetail__button" to="/">
-          Volver al inicio
-        </Link>
-        <Link hidden={!show} className="itemdetail__button" to={"/cart"}>
-          Ir al carrito
-        </Link>
+      <div>
+        <p>{title}</p>
+        <p>{hand}</p>
+        <p>{description}</p>
+        <p>Unidades disponibles {stock}</p>
+        <p>$ {price}</p>
+        <ItemCount stock={stock} productData={data} />
       </div>
     </div>
   );
-}
+};
 
 export default ItemDetail;

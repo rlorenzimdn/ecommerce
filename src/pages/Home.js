@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 
-function Home() {
+const Home = () => {
   return (
     <div className="container">
       <section className="main-container">
@@ -10,6 +10,6 @@ function Home() {
       </section>
     </div>
   );
-}
+};
 
 export default Home;

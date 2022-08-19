@@ -1,6 +1,6 @@
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 
-function Detail() {
+const Detail = () => {
   return (
     <div className="container">
       <section className="main-container">
@@ -8,6 +8,6 @@ function Detail() {
       </section>
     </div>
   );
-}
+};
 
 export default Detail;

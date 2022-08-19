@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import TopicsListContainer from "../components/TopicsListContainer/TopicsListContainer";
 
-function Topics() {
+const Topics = () => {
   return (
     <div className="container">
       <section className="main-container">
@@ -10,6 +10,6 @@ function Topics() {
       </section>
     </div>
   );
-}
+};
 
 export default Topics;

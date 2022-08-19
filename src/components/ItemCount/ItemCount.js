@@ -1,14 +1,14 @@
 import { useState, useContext } from "react";
 import "./ItemCount.scss";
-import { CartContext } from "../../context/CartContext"
+import { CartContext } from "../../Context/CartContext";
 
-function ItemCount({ stock, setStock }) {
+const ItemCount = ({ stock, setStock }) => {
   const { addProductToCart } = useContext(CartContext);
 
   const [count, setCount] = useState(1);
 
   const onAdd = () => {
-    addProductToCart(setStock)
+    addProductToCart(setStock);
     setCount(count + 1);
   };
 
@@ -23,6 +23,6 @@ function ItemCount({ stock, setStock }) {
       <button onClick={onAdd}>+</button>
     </div>
   );
-}
+};
 
 export default ItemCount;
