@@ -7,7 +7,7 @@ const ItemDetail = ({ data }) => {
   return (
     <div className="item-detail">
       <div>
-        <img src={`/assets/${image}`} alt="imagen de producto" />
+        <img src={image} alt="imagen de producto" />
       </div>
       <div>
         <p>{title}</p>
