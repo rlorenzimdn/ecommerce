@@ -1,6 +1,6 @@
+import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartProvider from "./Context/CartContext";
-import "./App.scss";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
@@ -9,7 +9,7 @@ import Authors from "./pages/Authors";
 import Contact from "./pages/Contact";
 // import Checkout from "./pages/Checkout";
 import Detail from "./pages/Detail";
-import Cart from "./pages/Cart";
+import ShoppingCart from "./pages/ShoppingCart";
 // import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/item/:id" element={<Detail />} />
           {/* <Route path="/item/:itemid" element={<ItemDetailContainer />} />   */}
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<ShoppingCart />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

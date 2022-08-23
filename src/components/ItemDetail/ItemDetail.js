@@ -1,5 +1,5 @@
-import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.scss";
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ data }) => {
   const { image, title, description, price, hand, stock } = data;

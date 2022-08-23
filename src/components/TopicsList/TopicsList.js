@@ -1,6 +1,6 @@
-import React from "react";
 import "./TopicsList.scss";
 import Topics from "../Topics/Topics";
+import React from "react";
 
 const TopicsList = ({ items }) => {
   return (

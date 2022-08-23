@@ -1,6 +1,6 @@
-import React from "react";
 import "./BooksList.scss";
 import Books from "../Books/Books";
+import React from "react";
 
 const BooksList = ({ items }) => {
   return (

@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
 import "./ItemCount.scss";
 import { CartContext } from "../../Context/CartContext";
+import { useState, useContext } from "react";
 
 const ItemCount = ({ stock, setStock }) => {
   const { addProductToCart } = useContext(CartContext);

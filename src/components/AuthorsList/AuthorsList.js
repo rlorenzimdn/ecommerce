@@ -1,6 +1,6 @@
-import React from "react";
 import "./AuthorsList.scss";
 import Authors from "../Authors/Authors";
+import React from "react";
 
 const AuthorsList = ({ items }) => {
   return (

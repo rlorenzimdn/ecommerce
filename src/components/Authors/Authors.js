@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
 import "./Authors.scss";
 import { CartContext } from "../../Context/CartContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const Authors = ({ data }) => {
   const { name } = useContext(CartContext);
