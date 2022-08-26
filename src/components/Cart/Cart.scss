@@ -1,7 +1,5 @@
-.cart{
+.cart {
     margin: 20px 0 60px 0;
-
-
     &__msg{
         margin:80px 20px;
         text-align:center;
@@ -10,7 +8,7 @@
 }
 
 
-.list-header{
+.list-header {
     display:grid;
     grid-template: auto / 0.5fr 2fr 1fr 1fr 1fr;
     width:80%;

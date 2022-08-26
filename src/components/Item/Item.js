@@ -1,12 +1,14 @@
 import "./Item.scss";
-import { CartContext } from "../../Context/CartContext";
+import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({ data }) => {
   const { name } = useContext(CartContext);
-
-  const { id, title, price, image } = data;
+  const { id, title, price, image, stock } = data;
+  const cartContex = useContext(CartContext);
+  const { addToCart } = cartContex;
 
   return (
     <Link to={`/item/${id}`}>
@@ -14,8 +16,18 @@ const Item = ({ data }) => {
       <div className="item__product">
         <img src={image} className="item__product__img" alt="Imagen Libro" />
         <p>{title}</p>
-        <p>${price}</p>
-        <button>Añadir al Carrito</button>
+        <p>---------</p>
+        <p>$ {price}</p>
+        <p>---------</p>
+        <ItemCount stock={stock} initial={1} />
+        <button
+          className="button button-primary"
+          onClick={() => {
+            addToCart(data, 1);
+          }}
+        >
+          Añadir al carrito
+        </button>
       </div>
     </Link>
   );

@@ -1,11 +1,10 @@
 import "./Authors.scss";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../Context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 const Authors = ({ data }) => {
   const { name } = useContext(CartContext);
-
   const { id, title, author } = data;
 
   return (

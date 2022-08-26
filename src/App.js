@@ -1,16 +1,15 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartProvider from "./Context/CartContext";
+import CartProvider from "./components/Context/CartContext";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import Topics from "./pages/Topics";
 import Authors from "./pages/Authors";
 import Contact from "./pages/Contact";
-// import Checkout from "./pages/Checkout";
 import Detail from "./pages/Detail";
-import ShoppingCart from "./pages/ShoppingCart";
-// import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import CartShopping from "./pages/CartShopping";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -24,8 +23,8 @@ function App() {
           <Route path="/authors" element={<Authors />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/item/:id" element={<Detail />} />
-          {/* <Route path="/item/:itemid" element={<ItemDetailContainer />} />   */}
-          <Route path="/cart" element={<ShoppingCart />} />
+          <Route path="/cart" element={<CartShopping />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

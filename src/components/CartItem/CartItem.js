@@ -1,7 +1,7 @@
 import "./CartItem.scss";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../Context/CartContext";
 import React, { useContext } from "react";
-import { MdOutlineClose } from "react-icons/md";
+import { MdRemoveShoppingCart } from "react-icons/md";
 
 const CartItem = ({ product }) => {
   const cartContex = useContext(CartContext);
@@ -15,11 +15,11 @@ const CartItem = ({ product }) => {
           removeItemById(product.id);
         }}
       >
-        <MdOutlineClose />
+        <MdRemoveShoppingCart />
       </div>
-      <h4 className="cart-item__item">{product.productName}</h4>
-      <span className="cart-item__item">${product.price}</span>
+      <h4 className="cart-item__item">{product.title}</h4>
       <span className="cart-item__item">{product.qty}</span>
+      <span className="cart-item__item">${product.price}</span>
       <span className="cart-item__item">${product.qty * product.price}</span>
     </div>
   );

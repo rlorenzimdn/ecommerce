@@ -3,7 +3,7 @@ import BooksList from "../BooksList/BooksList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import db from "../../firebaseConfig";
+import db from "../Firebase/firebaseConfig";
 
 const BooksListContainer = ({ section }) => {
   const { category } = useParams();

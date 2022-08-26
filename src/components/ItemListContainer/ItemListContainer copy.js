@@ -1,18 +1,18 @@
-import "./AuthorsListContainer.scss";
-import AuthorsList from "../AuthorsList/AuthorsList";
+import "./ItemListContainer.scss";
+import ItemList from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import db from "../Firebase/firebaseConfig";
 
-const AuthorsListContainer = ({ section }) => {
+const ItemListContainer = ({ section, categoryParam }) => {
   const { category } = useParams();
 
   const [listProducts, setListProducts] = useState([]);
 
   const getProducts = async () => {
     const productCollection = category
-      ? query(collection(db, "products"), orderBy("author"), limit(10))
+      ? query(collection(db, "products"), where("Budismo", "==", category))
       : collection(db, "products");
 
     const productSnapshot = await getDocs(productCollection);
@@ -36,9 +36,10 @@ const AuthorsListContainer = ({ section }) => {
   return (
     <div className="item__list__container">
       <h2>{section}</h2>
-      <AuthorsList items={listProducts} />
+      <ItemList items={listProducts} />
     </div>
   );
 };
 
-export default AuthorsListContainer;
+export default ItemListContainer;
+

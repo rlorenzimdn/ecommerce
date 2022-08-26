@@ -2,7 +2,7 @@ import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ data }) => {
-  const { image, title, description, price, hand, stock } = data;
+  const { image, title, description, price, stock } = data;
 
   return (
     <div className="item-detail">
@@ -11,10 +11,13 @@ const ItemDetail = ({ data }) => {
       </div>
       <div>
         <p>{title}</p>
-        <p>{hand}</p>
+        <p>----------------------------------------------------</p>
         <p>{description}</p>
-        <p>Unidades disponibles {stock}</p>
-        <p>$ {price}</p>
+        <p>-------------------</p>
+        <p>Disponibles: {stock}</p>
+        <p>-------------------</p>
+        <p>Precio: $ {price}</p>
+        <p>-------------------</p>
         <ItemCount stock={stock} productData={data} />
       </div>
     </div>

@@ -1,8 +1,11 @@
+import React from "react";
+import CartOrder from "../components/CartOrder/CartOrder";
+
 const Checkout = () => {
   return (
-    <div>
-      <h1>Compras</h1>
-    </div>
+    <main className="checkout">
+      <CartOrder />
+    </main>
   );
 };
 
