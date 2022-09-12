@@ -1,5 +1,5 @@
 import "./CartItem.scss";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../CartContext/CartContext";
 import React, { useContext } from "react";
 import { MdRemoveShoppingCart } from "react-icons/md";
 

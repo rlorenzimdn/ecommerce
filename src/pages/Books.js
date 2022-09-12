@@ -6,9 +6,9 @@ import BooksListContainer from "../components/BooksListContainer/BooksListContai
 const Books = () => {
   return (
     <div className="container">
-      <section className="main-container">
-        <BooksListContainer section="Listado de Libros" />
-      </section>
+      <div className="main-container">
+        <BooksListContainer section="Listado de Libros por Nombres" />
+      </div>
     </div>
   );
 };

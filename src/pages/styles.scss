@@ -1,19 +1,24 @@
-.main-container {
+.form__container {
+    display: grid;
+    margin-top: 30px;
     float: left;
     width: 100%;
     padding: 0 30px;
 }
 
+
 .body__contact {
-    width: 100%;
+    width: 80%;
     height: 40rem;
     margin-top: 30rem;
 }
 
 .form__control {
-    border: 1px solid lightblue !important;
+    border: 1px solid blue !important;
+    width: 100%;
 }
+
 .btn__Contact {
-   background-color: lightblue !important;
+   background-color: blue !important;
    color: white !important;
 }

@@ -1,5 +1,5 @@
-// Formulario de Contacto - faltaria guardar los datos en algun archivo
 import React, { useState } from "react";
+import "./styles.scss";
 
 const FORM_ENDPOINT = "";
 
@@ -22,6 +22,7 @@ const Contact = () => {
 
   return (
     <form
+      className="form__container"
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
       method="POST"
@@ -29,6 +30,7 @@ const Contact = () => {
     >
       <div>
         <input
+          className="form__control"
           type="text"
           placeholder="Nombre"
           id="nameContact"
@@ -37,16 +39,16 @@ const Contact = () => {
         />
       </div>
       <div>
-        <input type="text" placeholder="Apellido" name="surname" required />
+        <input className="form__control" type="text" placeholder="Apellido" name="surname" required />
       </div>
       <div>
-        <input type="email" placeholder="Email" name="email" required />
+        <input className="form__control" type="email" placeholder="Email" name="email" required />
       </div>
       <div>
-        <textarea placeholder="Su Mensaje" name="message" required />
+        <textarea className="form__control" placeholder="Su Mensaje" name="message" required />
       </div>
       <div>
-        <button type="submit"> Enviar Mensaje </button>
+        <button className="btn__Contact" type="submit"> Enviar Mensaje </button>
       </div>
     </form>
   );

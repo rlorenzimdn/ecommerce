@@ -6,9 +6,9 @@ import TopicsListContainer from "../components/TopicsListContainer/TopicsListCon
 const Topics = () => {
   return (
     <div className="container">
-      <section className="main-container">
-        <TopicsListContainer section="Listado de Libros" />
-      </section>
+      <div className="main-container">
+        <TopicsListContainer section="Listado de Libros por Temas" />
+      </div>
     </div>
   );
 };

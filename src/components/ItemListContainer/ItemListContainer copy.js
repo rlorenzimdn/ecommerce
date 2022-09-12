@@ -12,7 +12,7 @@ const ItemListContainer = ({ section, categoryParam }) => {
 
   const getProducts = async () => {
     const productCollection = category
-      ? query(collection(db, "products"), where("Budismo", "==", category))
+      ? query(collection(db, "products"), where("category", "==", category))
       : collection(db, "products");
 
     const productSnapshot = await getDocs(productCollection);
@@ -42,4 +42,3 @@ const ItemListContainer = ({ section, categoryParam }) => {
 };
 
 export default ItemListContainer;
-

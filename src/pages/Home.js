@@ -5,9 +5,9 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 const Home = () => {
   return (
     <div className="container">
-      <section className="main-container">
+      <div className="main-container">
         <ItemListContainer section="Libros Destacados" />
-      </section>
+      </div>
     </div>
   );
 };

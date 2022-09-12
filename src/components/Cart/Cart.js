@@ -1,6 +1,6 @@
 import "./Cart.scss";
 import CartItem from "../CartItem/CartItem";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../CartContext/CartContext";
 import React, { useContext, useState, useEffect } from "react";
 
 const Cart = () => {
@@ -24,7 +24,7 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <section className="cart">
+    <div className="cart">
       <ul className="list-header">
         <li className="list-header__item"></li>
         <li className="list-header__item">Libro</li>
@@ -46,7 +46,7 @@ const Cart = () => {
         <li className="list-header__item"></li>
         <li className="list-header__item">${getTotalPrice(cart)}</li>
       </ul>
-    </section>
+    </div>
   );
 };
 

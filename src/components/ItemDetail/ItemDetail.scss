@@ -1,4 +1,4 @@
-.item-detail {
+.item__detail {
   width: 50%;
   box-shadow: 1px 1px 5px #afafaf47;
   border: 10px;
@@ -24,6 +24,7 @@
   font-size: large;
 }
 
-.btn-small {
-  font-size: 12px;
+.btn__detail {
+  background-color: blue !important;
+  color: white !important;
 }

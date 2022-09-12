@@ -1,4 +1,3 @@
-// Pagina de Autores - Faltaria incluir ordenar alfabeticamente e incluir busqueda
 import React from "react";
 import "./styles.scss";
 import AuthorsListContainer from "../components/AuthorsListContainer/AuthorsListContainer";
@@ -6,9 +5,9 @@ import AuthorsListContainer from "../components/AuthorsListContainer/AuthorsList
 const Authors = () => {
   return (
     <div className="container">
-      <section className="main-container">
-        <AuthorsListContainer section="Listado de Libros" />
-      </section>
+      <div className="main-container">
+        <AuthorsListContainer section="Listado de Libros por Autores" />
+      </div>
     </div>
   );
 };

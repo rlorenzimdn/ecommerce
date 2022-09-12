@@ -1,5 +1,5 @@
 import "./Authors.scss";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../CartContext/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const Authors = ({ data }) => {
         <p>--------------------------------------------</p>
         <p>Nombre: {title}</p>
         <p>--------------------------------------------</p>
-        <button>Añadir al Carrito</button>
+        <button>Ver Detalles</button>
       </div>
     </Link>
   );

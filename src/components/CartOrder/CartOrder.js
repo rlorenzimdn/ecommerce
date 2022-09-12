@@ -1,7 +1,7 @@
 import "./CartOrder.scss";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../CartContext/CartContext";
 import { createItem, deleteItem } from "../Firebase/Firestore";
 
 const CartOrder = () => {

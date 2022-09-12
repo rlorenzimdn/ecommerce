@@ -3,9 +3,9 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 const Detail = () => {
   return (
     <div className="container">
-      <section className="main-container">
+      <div className="main-container">
         <ItemDetailContainer />
-      </section>
+      </div>
     </div>
   );
 };

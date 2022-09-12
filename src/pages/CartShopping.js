@@ -7,10 +7,10 @@ const CartShopping = () => {
 
   return (
     <div className="container">
-      <section className="main-container">
+      <div className="main-container">
         <Cart section="Carrito de Compras" />
-      </section>
-      <section className="main-container">
+      </div>
+      <div className="main-container">
       <button
           className="button button-primary"
           onClick={() => {
@@ -20,7 +20,7 @@ const CartShopping = () => {
         >
           Continuar con la Compra
         </button>
-      </section>
+      </div>
     </div>
   );
 };
